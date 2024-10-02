@@ -3,19 +3,16 @@ package Cashier;
 public class Main {
 
 	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-		System.out.println("HI");
 		
 		Book crimeAndPunishment = new Book(20, "Crime and Punishment", "Sad", "Doedovesky");
-	
-		Book lolz = new Book(20, "Crime and Punishmentt", "Sad", "Doedovesky");
 
+		//will not count the book due to misspelled title
+		Book invalidBook = new Book(20, "Crime and Punishmentt", "Sad", "Doedovesky");
 		Book winnie = Catalogue.winnie;
-		
 		Cart cart = new Cart();
 		
 		cart.add(crimeAndPunishment);
-		cart.add(lolz);
+		cart.add(invalidBook);
 		cart.add(winnie);
 		
 		Cashier cashier = new Cashier(cart);
